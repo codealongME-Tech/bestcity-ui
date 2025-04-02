@@ -104,6 +104,7 @@ export default function Pricing() {
               </span>
             </div>
           </div>
+          
 
           {/* Pricing cards */}
           <div className="pricing-cards">
