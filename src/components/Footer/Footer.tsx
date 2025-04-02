@@ -1,5 +1,4 @@
 import React from 'react';
-import MainHome from '../NavBar/sr_consulting.jpg';
 import { Phone, Mail, MapPin, Instagram, Facebook, Twitter, Linkedin } from 'lucide-react';
 import './Footer.css';
 import Link from 'next/link';
@@ -28,7 +27,6 @@ const Footer = () => {
         <div className="top-section">
           {/* Logo Section */}
           <Link href="/" className="logo-link">
-            {/* <img src={MainHome} alt="SR Resourcing" className="logo-image" /> */}
             <span className="company-name">
               BEST<span className="!bg-gradient-to-r from-[#aa60ea] to-[#4f46e5] !bg-clip-text !text-transparent">CITY</span>
             </span>

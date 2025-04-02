@@ -1,5 +1,7 @@
 "use client";
 import React, { useState } from 'react';
+import Image from 'next/image';
+
 
 // Types
 interface Author {
@@ -138,7 +140,9 @@ export default function Blogs() {
                         {featuredPosts.map((post) => (
                             <div key={post.id} className="flex flex-col h-full rounded-lg overflow-hidden shadow-lg">
                                 <a href={post.url} className="block h-64 overflow-hidden">
-                                    <img
+                                    <Image
+                                        width={500}
+                                        height={300}
                                         src={post.imageUrl}
                                         alt={post.title}
                                         className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
@@ -160,7 +164,9 @@ export default function Blogs() {
 
                                     <div className="mt-auto flex items-center justify-between">
                                         <div className="flex items-center">
-                                            <img
+                                            <Image
+                                                width={500}
+                                                height={300}
                                                 src={post.author.image}
                                                 alt={post.author.name}
                                                 className="w-10 h-10 rounded-full mr-3"
@@ -240,7 +246,9 @@ export default function Blogs() {
                                 {filteredPosts.map((post) => (
                                     <div key={post.id} className="bg-white rounded-lg shadow-md overflow-hidden">
                                         <a href={post.url} className="block h-48 overflow-hidden">
-                                            <img
+                                            <Image
+                                                width={500}
+                                                height={300}
                                                 src={post.imageUrl}
                                                 alt={post.title}
                                                 className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
@@ -259,7 +267,9 @@ export default function Blogs() {
                                             <p className="text-gray-600 mb-4">{post.excerpt}</p>
                                             <div className="flex items-center justify-between">
                                                 <div className="flex items-center">
-                                                    <img
+                                                    <Image
+                                                        width={500}
+                                                        height={300}
                                                         src={post.author.image}
                                                         alt={post.author.name}
                                                         className="w-8 h-8 rounded-full mr-2"

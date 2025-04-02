@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown, ChevronUp } from 'lucide-react';
-import MainHome from './sr_consulting.jpg'
 import './Nav.css';
 import Link from 'next/link';
 
@@ -9,7 +8,6 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState('');
-  const [isServicesHovered, setIsServicesHovered] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {

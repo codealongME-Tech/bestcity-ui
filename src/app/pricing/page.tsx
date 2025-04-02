@@ -7,11 +7,6 @@ import Image from 'next/image';
 
 export default function Pricing() {
   const [selectedPlan, setSelectedPlan] = useState('monthly');
-  const [isQueryFormOpen, setIsQueryFormOpen] = useState(false);
-
-  const handleConnect = () => {
-    setIsQueryFormOpen(true);
-  };
 
   return (
     <div className="pricing-container">
@@ -71,7 +66,6 @@ export default function Pricing() {
               </div>
               <div className="connect-container">
                 <button
-                  onClick={handleConnect}
                   className="connect-button"
                 >
                   Check Pricing
