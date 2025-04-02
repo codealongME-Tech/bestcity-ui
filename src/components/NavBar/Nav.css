@@ -1,0 +1,367 @@
+:root {
+  /* If you want to use the custom font */
+  --custom-font: 'TT Commons Classic', Arial, sans-serif;
+
+  /* If you prefer the system font stack */
+  --system-font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  /* Applying either the custom font or the system font stack */
+  font-family: var(--custom-font);
+}
+
+/* Base navbar styles */
+.navbar-appbar {
+  font-family: var(--bs-font-sans-serif);
+  background-color: black;
+  position: fixed;
+  width: 100%;
+  z-index: 50;
+  transition: all 0.3s;
+}
+
+/* Shadow effect when scrolled */
+.navbar-shadow-bottom {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Text and link colors */
+.navbar-appbar a,
+.navbar-appbar button,
+.navbar-appbar span {
+  color: white;
+}
+
+/* Hover states for links */
+.navbar-appbar a:hover,
+.navbar-appbar button:hover {
+  color: #3b82f6;
+}
+
+/* Container for navbar content */
+.navbar-container {
+  font-family: var(--custom-font);
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Navbar content layout */
+.navbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4rem;
+  position: relative;
+}
+
+/* Logo styling */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo-text {
+  font-weight: 700;
+  /* font-bold in tailwind */
+  font-size: 1.25rem;
+  /* text-xl in tailwind */
+}
+
+/* Desktop menu - centered */
+.navbar-desktop-menu {
+  display: none;
+  align-items: center;
+  margin: 0 auto;
+  font-size: 1.2vw;
+  font-family: var(--custom-font);
+  /* This centers the menu */
+}
+
+@media (min-width: 1024px) {
+  .navbar-desktop-menu {
+    display: flex;
+    gap: 1rem;
+    /* space-x-8 in tailwind */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* Standard navbar links */
+.navbar-link {
+  font-weight: 400;
+  transition: color 0.3s;
+  color: #fff !important;
+  padding: 0.5rem 0.5rem;
+  border-radius: 5px;
+  background-color: transparent;
+  transition: background-color 0.3s;
+  font-size: 1.2vw;
+}
+
+.navbar-link:hover {
+  background-color: rgba(255, 254, 254, 0.155);
+}
+
+/* Dropdown container */
+.navbar-dropdown {
+  position: relative;
+}
+
+/* Dropdown toggle button */
+.navbar-dropdown-toggle {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  transition: color 0.3s;
+  padding: 0.5rem 0.5rem;
+  border-radius: 8px;
+  background-color: transparent;
+  transition: background-color 0.3s;
+}
+
+.navbar-dropdown-toggle:hover {
+  color: #fff;
+  background-color: rgba(255, 254, 254, 0.155);
+}
+
+
+/* Icon container for chevron */
+.navbar-icon-container {
+  width: 1rem;
+  height: 1rem;
+  margin-left: 0.25rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-icon {
+  width: 1rem;
+  height: 1rem;
+  transition: transform 0.3s;
+}
+
+/* Dropdown menu */
+.navbar-dropdown-menu {
+  position: absolute;
+  left: 0;
+  margin-top: 0.5rem;
+  width: 16rem;
+  /* w-64 in tailwind */
+  border-radius: 0.5rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s;
+  background-color: black;
+  border: 1px solid #333;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-0.5rem);
+}
+
+.dropdown-active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Dropdown content container */
+.navbar-dropdown-content {
+  padding: 0.5rem;
+}
+
+/* Dropdown items */
+.navbar-dropdown-item {
+  display: block;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-dropdown-item:hover {
+  background-color: #1a1a1a;
+  color: #3b82f6;
+}
+
+/* Auth buttons container */
+.navbar-auth-buttons {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .navbar-auth-buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+/* Login button */
+.navbar-login-button {
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  transition: all 0.3s;
+  color: white !important;
+}
+
+.navbar-login-button:hover {
+  background-color: rgba(255, 254, 254, 0.155);
+}
+
+/* Try for Free button - Desktop */
+.navbar-try-free-button {
+  font-weight: 400;
+  padding: 0.5rem 1rem;
+  border-radius: 0.6rem;
+  /* background-color: #039179; */
+  background: linear-gradient(to right, #aa60ea, #4f46e5);
+  color: #fff !important;
+  transition: all 0.3s;
+}
+
+.navbar-try-free-button:hover {
+  background: linear-gradient(to right, #9f41f1, #2e24ef);
+}
+
+/* .navbar-appbar a {
+  color: black;
+} */
+
+/* Mobile menu toggle button */
+.navbar-mobile-toggle {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  display: block;
+}
+
+.navbar-mobile-toggle:hover {
+  background-color: rgba(243, 244, 246, 0.1);
+}
+
+@media (min-width: 1024px) {
+  .navbar-mobile-toggle {
+    display: none;
+  }
+}
+
+/* Menu icon */
+.navbar-menu-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* Mobile menu */
+.navbar-mobile-menu {
+  display: block;
+}
+
+@media (min-width: 1024px) {
+  .navbar-mobile-menu {
+    display: none;
+  }
+}
+
+/* Mobile menu content */
+.navbar-mobile-menu-content {
+  padding: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  background-color: black;
+}
+
+/* Mobile menu links */
+.navbar-mobile-link {
+  display: block;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  border-radius: 0.5rem;
+}
+
+.navbar-mobile-link:hover {
+  background-color: #1a1a1a;
+  color: #3b82f6;
+}
+
+/* Mobile dropdown */
+.navbar-mobile-dropdown {
+  position: relative;
+}
+
+/* Mobile dropdown toggle */
+.navbar-mobile-dropdown-toggle {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-mobile-dropdown-toggle:hover {
+  background-color: #1a1a1a;
+  color: #3b82f6;
+}
+
+/* Mobile submenu */
+.navbar-mobile-submenu {
+  padding-left: 1rem;
+}
+
+/* Mobile submenu items */
+.navbar-mobile-submenu-item {
+  display: block;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  border-radius: 0.5rem;
+}
+
+.navbar-mobile-submenu-item:hover {
+  background-color: #1a1a1a;
+  color: #3b82f6;
+}
+
+/* Mobile auth buttons */
+.navbar-mobile-auth-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+}
+
+/* Mobile login button */
+.navbar-mobile-login-button {
+  display: block;
+  padding: 0.75rem 1rem;
+  text-align: center;
+  font-weight: 500;
+  border-radius: 0.375rem;
+  transition: all 0.3s;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-mobile-login-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+/* Mobile try free button */
+.navbar-mobile-try-free-button {
+  display: block;
+  padding: 0.75rem 1rem;
+  text-align: center;
+  font-weight: 500;
+  border-radius: 0.375rem;
+  transition: all 0.3s;
+  background-color: #fff;
+  color: #000;
+}
+
+.navbar-mobile-try-free-button:hover {
+  background-color: #039179;
+  color: white;
+}

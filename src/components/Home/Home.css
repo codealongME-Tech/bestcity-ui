@@ -1,0 +1,607 @@
+:root {
+  /* If you want to use the custom font */
+  --custom-font: 'TT Commons Classic', Arial, sans-serif;
+
+  /* If you prefer the system font stack */
+  --system-font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  /* Applying either the custom font or the system font stack */
+  font-family: var(--custom-font);
+}
+
+/* Add this to your Home.css or relevant CSS file */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-left {
+  animation: slideInFromLeft 1s ease-out forwards;
+}
+
+/* Fullscreen container for the image */
+.fullscreen-container {
+  font-family: var(--custom-font);
+}
+
+/* Styling for the fullscreen image */
+.homeMain-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: fade-in-up 1.5s ease-out forwards;
+}
+
+/* Overlay text styling positioned to the left */
+.home-overlay-text {
+  font-family: var(--custom-font);
+  width: 40%;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  color: white;
+  text-align: left;
+  font-size: 2rem;
+  z-index: 2;
+}
+
+.tagLine {
+  text-shadow: 0em 0em 0.3em #000000;
+  text-transform: uppercase;
+  font-size: 55px !important;
+  line-height: 1em;
+  margin-bottom: 0;
+}
+
+.homeTitle {
+  text-shadow: 0em 0em 0.3em #000000;
+  margin-bottom: 0;
+}
+
+@keyframes infiniteSlide {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-infinite-slide {
+  display: inline-flex;
+  animation: infiniteSlide 40s linear infinite;
+}
+
+.slide-track {
+  display: flex;
+  width: max-content;
+}
+
+.servicesName {
+  line-height: 1.2em;
+  font-weight: 700;
+  font-size: 40px;
+  color: #0f5880;
+  margin: 0;
+}
+
+.servicesTag {
+  font-weight: 700;
+  font-size: 30px;
+  color: #000;
+  margin: 0;
+}
+
+.servicesDesc {
+  font-weight: 600;
+  font-size: 20px;
+  color: #147cb3;
+  margin: 0;
+}
+
+.services-overlay-text {
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  color: white;
+  text-align: left;
+  font-size: 2rem;
+  z-index: 2;
+}
+
+.servicesName1 {
+  text-shadow: 0em 0em 0.3em #000000;
+  font-weight: 700;
+  font-size: 43px;
+  color: #fff;
+  margin: 0;
+}
+
+.servicesDesc1 {
+  text-shadow: 0em 0em 0.3em #000000;
+  font-weight: 700;
+  font-size: 34px;
+  color: #fff;
+  margin: 0;
+}
+
+/* Side-by-side text and image container */
+.text-image-container {
+  font-family: 'Open Sans', Helvetica, Arial, Lucida, sans-serif;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  margin: 80px auto;
+  width: 82%;
+  gap: 40px;
+}
+
+/* Styling for the text content */
+.text-content {
+  flex: 1;
+  color: #000;
+  text-align: left;
+  font-size: 1.2rem;
+  padding: 0px;
+  width: 90%;
+}
+
+/* Styling for the image content */
+.image-content {
+  flex: 1;
+  max-width: 450px;
+  width: 100%;
+  object-fit: contain;
+}
+
+.homeButton {
+  margin-top: 20px !important;
+  border-radius: 8px !important;
+  padding: 10px 40px !important;
+  background-color: rgb(22, 79, 178);
+  font-weight: 600 !important;
+  font-size: 1.2rem !important;
+  text-transform: none !important;
+}
+
+/* Keyframe animation for fade-in-up */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+  .home-overlay-text {
+    width: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .tagLine {
+    font-size: 40px !important;
+  }
+
+  .homeTitle {
+    font-size: 24px;
+  }
+
+  .text-image-container {
+    flex-direction: column-reverse;
+    width: 90%;
+    margin: 40px auto;
+    gap: 30px;
+  }
+
+  .text-image-container:nth-child(odd) {
+    flex-direction: column-reverse;
+  }
+
+  .text-image-container:nth-child(even) {
+    flex-direction: column-reverse;
+  }
+
+  .text-content {
+    order: 2;
+    width: 100%;
+    text-align: center;
+  }
+
+  .image-content {
+    order: 1;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .services-overlay-text {
+    width: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .servicesName {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .servicesTag {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .servicesDesc {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .servicesName1 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .servicesDesc1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .homeButton {
+    padding: 8px 30px !important;
+    font-size: 1rem !important;
+    display: block !important;
+    margin: 20px auto !important;
+  }
+}
+
+.connect-button {
+  /*background: #039179; */
+  cursor: pointer;
+  background: linear-gradient(to right, #aa60ea, #4f46e5);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: fit-content;
+}
+
+.connectHome {
+  bottom: 2.5rem !important;
+}
+
+@media screen and (max-width: 500px) {
+  .connectHome {
+    bottom: 0.5rem !important;
+  }
+}
+
+.connect-button:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+  background: linear-gradient(to right, #9f41f1, #2e24ef);
+}
+
+.serviceCard {
+  font-family: var(--custom-font);
+  padding: 0.5rem 12rem;
+}
+
+.cardtitle {
+  color: #1f1f1d;
+  font-size: 1.625em;
+  line-height: 1.23;
+}
+
+/* Try for Free button - Desktop */
+.BookDemo-button {
+  font-weight: 500;
+  padding: 0.8rem 1.2rem;
+  border-radius: 0.8rem;
+  /* background-color: #039179; */
+  background: linear-gradient(to right, #aa60ea, #4f46e5);
+  color: white !important;
+  transition: all 0.3s;
+}
+
+.BookDemo-button:hover {
+  /*background-color: #017360;*/
+  cursor: pointer;
+  background: linear-gradient(to right, #9f41f1, #2e24ef);
+}
+
+@media screen and (max-width: 500px) {
+  .cardtitle {
+    font-size: 1.4rem;
+    line-height: 1.23;
+  }
+}
+
+.cardDescription {
+  font-family: TT Commons Classic, Arial, sans-serif;
+  color: #1f1f1da9;
+  margin-bottom: 0;
+  font-size: 1.125em;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+@media screen and (max-width: 500px) {
+  .serviceCard {
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Small mobile devices */
+@media screen and (max-width: 480px) {
+  .tagLine {
+    font-size: 32px !important;
+  }
+
+  .homeTitle {
+    font-size: 20px;
+  }
+
+  .servicesName,
+  .servicesName1 {
+    font-size: 28px;
+  }
+
+  .servicesTag,
+  .servicesDesc1 {
+    font-size: 22px;
+  }
+
+  .servicesDesc {
+    font-size: 16px;
+  }
+
+}
+
+.clientTitle {
+  letter-spacing: -.02em;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 2.625em !important;
+  font-weight: 500;
+  line-height: 1.05;
+}
+
+.serviceMainTitle {
+  letter-spacing: -.02em !important;
+  margin-top: 0 !important;
+  font-size: 2.625em !important;
+  font-weight: 500 !important;
+  line-height: 1.05 !important;
+}
+
+.container {
+  max-width: 100% !important;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
+/* Testimonial section */
+.testimonial-section {
+  background-color: white;
+  padding: 5rem 0;
+}
+
+.testimonial-container {
+  max-width: 72rem;
+  /* equivalent to max-w-6xl */
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Testimonial card */
+.testimonial-card {
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  border-radius: 1rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.testimonial-layout {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Image container */
+.testimonial-image-container {
+  width: 40%;
+  position: relative;
+}
+
+.testimonial-image-container,
+.testimonial-content {
+  transition: opacity 0.1s ease-in-out;
+}
+
+/* Animation for sliding left (next slide) */
+.testimonial-card.slide-left {
+  transform: translateX(-10px);
+  opacity: 0;
+}
+
+/* Animation for sliding right (previous slide) */
+.testimonial-card.slide-right {
+  transform: translateX(10px);
+  opacity: 0;
+}
+
+.testimonial-image {
+  width: 40%;
+  height: 20rem;
+  /* 320px - equivalent to h-80 */
+  object-fit: cover;
+}
+
+.testimonial-company-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.testimonial-company-badge span {
+  color: white;
+  font-weight: 500;
+}
+
+/* Content container */
+.testimonial-content {
+  width: 60%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.testimonial-quote {
+  color: #1f1f1d;
+  letter-spacing: -.01em;
+  margin-bottom: 0;
+  font-size: 1.625em;
+  font-weight: 500;
+  line-height: 1.23;
+}
+
+.testimonial-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.testimonial-author-name {
+  color: #1f1f1d;
+  letter-spacing: -.01em;
+  font-size: 1.25em;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.testimonial-author-position {
+  color: #1f1f1db3;
+  margin-bottom: 0;
+  font-size: 1.125em;
+  font-weight: 400;
+  line-height: 1.33;
+}
+
+.testimonial-read-more {
+  border: 1px solid #333330;
+  color:#1f1f1d;
+  cursor: pointer;
+  border-radius: .5em;
+  justify-content: center;
+  align-items: center;
+  height: 2.25em;
+  padding: .5em 1em;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color .3s;
+  display: flex;
+}
+
+.testimonial-read-more:hover {
+  background-color: #f3f4f6;
+  /* equivalent to hover:bg-gray-100 */
+}
+
+/* Navigation */
+.testimonial-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.testimonial-nav-button {
+  transition: transform 0.2s ease-in-out, background-color 0.3s;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid #f3f4f6;
+  background-color: #f3f4f6;
+  /* equivalent to bg-gray-100 */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.testimonial-nav-button:hover {
+  background-color: #e5e7eb;
+  /* equivalent to hover:bg-gray-200 */
+}
+
+.testimonial-nav-button:active {
+  transform: scale(0.95);
+}
+
+.testimonial-pagination {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.testimonial-current-slide {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.testimonial-divider,
+.testimonial-total-slides {
+  color: #9ca3af;
+  /* equivalent to text-gray-400 */
+}
+
+/* Media queries for responsive design */
+@media (min-width: 768px) {
+  .testimonial-layout {
+    flex-direction: row;
+  }
+
+  .testimonial-image-container {
+    width: 40%;
+  }
+
+  .testimonial-content {
+    width: 60%;
+  }
+
+  .testimonial-image {
+    height: 24rem;
+    /* 384px - equivalent to md:h-96 */
+  }
+}
