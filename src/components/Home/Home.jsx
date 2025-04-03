@@ -15,7 +15,7 @@ const HomePage = () => {
   const services = [
     {
       title: 'Modern architecture',
-      description: 'BestCity works seamlessly with any IP camera and offers a wide range of cameras to choose from—your one-stop shop for all your security needs. Whether you manage 10 cameras or thousands, Coram scales effortlessly to meet your demands.',
+      description: 'BestCity works seamlessly with any IP camera and offers a wide range of cameras to choose from—your one-stop shop for all your security needs. Whether you manage 10 cameras or thousands, BestCity scales effortlessly to meet your demands.',
       icon: <Cctv size={24} />,
       path: '/Modernarchitecture',
       image: '/HomeImages/Modern architecture.jpeg'
@@ -140,7 +140,7 @@ const HomePage = () => {
 
   const testimonials = [
     {
-      quote: "Coram AI's software is designed with the user in mind, and they are always open to feedback and suggestions for improvement. Their commitment to customer satisfaction is reflected in their responsive customer support.",
+      quote: "BestCity AI's software is designed with the user in mind, and they are always open to feedback and suggestions for improvement. Their commitment to customer satisfaction is reflected in their responsive customer support.",
       author: "Ricardo Diaz",
       position: "Director of IT Dreisbach Enterprises",
       path: '/Modernarchitecture',
@@ -333,7 +333,7 @@ const HomePage = () => {
           <div className="max-w-7xl mx-auto py-5 px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col items-center text-center gap-10">
               <p className="text-xl text-[#ffffffbf] max-w-2xl">
-                Discover how businesses with hundreds of cameras use Coram to enhance security and operations. Experience AI that delivers real business value daily.
+                Discover how businesses with hundreds of cameras use BestCity to enhance security and operations. Experience AI that delivers real business value daily.
               </p>
               <button className="BookDemo-button">
                 Book a demo
