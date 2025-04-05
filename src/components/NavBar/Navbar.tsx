@@ -34,7 +34,7 @@ const Navbar = () => {
           <Link href="/" className="navbar-logo">
             <span className="navbar-logo-text">
               BEST
-              <span className="!bg-gradient-to-r from-[#c78ef9] to-[#8781ef] !bg-clip-text !text-transparent">
+              <span className="!text-[#5ED9BF]">
                 CITY
               </span>
             </span>

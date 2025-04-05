@@ -9,277 +9,19 @@
   font-family: var(--custom-font);
 }
 
-/* Add this to your Home.css or relevant CSS file */
-@keyframes slideInFromLeft {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-.slide-in-left {
-  animation: slideInFromLeft 1s ease-out forwards;
-}
-
 /* Fullscreen container for the image */
 .fullscreen-container {
   font-family: var(--custom-font);
 }
 
-/* Styling for the fullscreen image */
-.homeMain-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  animation: fade-in-up 1.5s ease-out forwards;
-}
-
-/* Overlay text styling positioned to the left */
-.home-overlay-text {
-  font-family: var(--custom-font);
-  width: 40%;
-  position: absolute;
-  top: 50%;
-  left: 10%;
-  transform: translateY(-50%);
-  color: white;
-  text-align: left;
-  font-size: 2rem;
-  z-index: 2;
-}
-
-.tagLine {
-  text-shadow: 0em 0em 0.3em #000000;
-  text-transform: uppercase;
-  font-size: 55px !important;
-  line-height: 1em;
-  margin-bottom: 0;
-}
-
-.homeTitle {
-  text-shadow: 0em 0em 0.3em #000000;
-  margin-bottom: 0;
-}
-
-@keyframes infiniteSlide {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(-100%);
-  }
-}
-
-.animate-infinite-slide {
-  display: inline-flex;
-  animation: infiniteSlide 40s linear infinite;
-}
-
-.slide-track {
-  display: flex;
-  width: max-content;
-}
-
-.servicesName {
-  line-height: 1.2em;
-  font-weight: 700;
-  font-size: 40px;
-  color: #0f5880;
-  margin: 0;
-}
-
-.servicesTag {
-  font-weight: 700;
-  font-size: 30px;
-  color: #000;
-  margin: 0;
-}
-
-.servicesDesc {
-  font-weight: 600;
-  font-size: 20px;
-  color: #147cb3;
-  margin: 0;
-}
-
-.services-overlay-text {
-  width: 80%;
-  position: absolute;
-  top: 50%;
-  left: 10%;
-  transform: translateY(-50%);
-  color: white;
-  text-align: left;
-  font-size: 2rem;
-  z-index: 2;
-}
-
-.servicesName1 {
-  text-shadow: 0em 0em 0.3em #000000;
-  font-weight: 700;
-  font-size: 43px;
-  color: #fff;
-  margin: 0;
-}
-
-.servicesDesc1 {
-  text-shadow: 0em 0em 0.3em #000000;
-  font-weight: 700;
-  font-size: 34px;
-  color: #fff;
-  margin: 0;
-}
-
-/* Side-by-side text and image container */
-.text-image-container {
-  font-family: 'Open Sans', Helvetica, Arial, Lucida, sans-serif;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px;
-  margin: 80px auto;
-  width: 82%;
-  gap: 40px;
-}
-
-/* Styling for the text content */
-.text-content {
-  flex: 1;
-  color: #000;
-  text-align: left;
-  font-size: 1.2rem;
-  padding: 0px;
-  width: 90%;
-}
-
-/* Styling for the image content */
-.image-content {
-  flex: 1;
-  max-width: 450px;
-  width: 100%;
-  object-fit: contain;
-}
-
-.homeButton {
-  margin-top: 20px !important;
-  border-radius: 8px !important;
-  padding: 10px 40px !important;
-  background-color: rgb(22, 79, 178);
-  font-weight: 600 !important;
-  font-size: 1.2rem !important;
-  text-transform: none !important;
-}
-
-/* Keyframe animation for fade-in-up */
-@keyframes fade-in-up {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Mobile Responsive Styles */
-@media screen and (max-width: 768px) {
-  .home-overlay-text {
-    width: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-
-  .tagLine {
-    font-size: 40px !important;
-  }
-
-  .homeTitle {
-    font-size: 24px;
-  }
-
-  .text-image-container {
-    flex-direction: column-reverse;
-    width: 90%;
-    margin: 40px auto;
-    gap: 30px;
-  }
-
-  .text-image-container:nth-child(odd) {
-    flex-direction: column-reverse;
-  }
-
-  .text-image-container:nth-child(even) {
-    flex-direction: column-reverse;
-  }
-
-  .text-content {
-    order: 2;
-    width: 100%;
-    text-align: center;
-  }
-
-  .image-content {
-    order: 1;
-    max-width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .services-overlay-text {
-    width: 90%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-
-  .servicesName {
-    font-size: 32px;
-    text-align: center;
-  }
-
-  .servicesTag {
-    font-size: 24px;
-    text-align: center;
-  }
-
-  .servicesDesc {
-    font-size: 18px;
-    text-align: center;
-  }
-
-  .servicesName1 {
-    font-size: 32px;
-    text-align: center;
-  }
-
-  .servicesDesc1 {
-    font-size: 24px;
-    text-align: center;
-  }
-
-  .homeButton {
-    padding: 8px 30px !important;
-    font-size: 1rem !important;
-    display: block !important;
-    margin: 20px auto !important;
-  }
-}
-
 .connect-button {
   /*background: #039179; */
   cursor: pointer;
-  background: linear-gradient(to right, #aa60ea, #4f46e5);
-  color: white;
+  background: #5ED9BF;
+  color: #01041B;
+  font-weight: 500;
   padding: 1rem 2rem;
+  font-size: 1rem;
   border-radius: 9999px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-in-out;
@@ -287,6 +29,7 @@
   align-items: center;
   gap: 0.5rem;
   width: fit-content;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .connectHome {
@@ -302,45 +45,214 @@
 .connect-button:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   transform: scale(1.05);
-  background: linear-gradient(to right, #9f41f1, #2e24ef);
+  background: #009877;
 }
 
-.serviceCard {
-  font-family: var(--custom-font);
-  padding: 0.5rem 12rem;
+/* Features Component Styles */
+
+/* Container styling */
+.features-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 5rem 4rem;
+  position: relative;
+  border-radius: 8px;
 }
 
-.cardtitle {
-  color: #1f1f1d;
-  font-size: 1.625em;
-  line-height: 1.23;
+/* Top section with label and heading */
+.features-label {
+  display: inline-block;
+  background-color: #4fd1c5; /* teal-400 */
+  color: #01041B;
+  font-weight: 600;
+  font-size: 12px;
+  padding: 0.5rem 1.5rem;
+  border-radius: 9999px;
+  margin-bottom: 1rem;
 }
 
-/* Try for Free button - Desktop */
-.BookDemo-button {
-  font-weight: 500;
-  padding: 0.8rem 1.2rem;
-  border-radius: 0.8rem;
-  /* background-color: #039179; */
-  background: linear-gradient(to right, #aa60ea, #4f46e5);
-  color: white !important;
-  transition: all 0.3s;
+.features-heading {
+  font-size: 3rem;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #2d3748; /* gray-800 */
+  margin-bottom: 1.5rem;
 }
 
-.BookDemo-button:hover {
-  /*background-color: #017360;*/
+/* Content layout */
+.features-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* Text content */
+.features-text {
+  width: 30%;
+  position: relative;
+  padding-bottom: 3rem; /* Space for nav buttons */
+}
+
+.features-description {
+  font-size: 18px;
+  color: #273B3E;
+  line-height: 1.625;
+}
+
+/* Images grid */
+.features-images {
+  width: 65%;
+}
+
+.images-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.image-container {
+  position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  aspect-ratio: 1/1;
+  height: 100%;
+}
+
+.feature-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+/* Navigation buttons */
+.nav-buttons {
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.nav-button {
+  background-color: #01041B;
+  color: white;
+  border-radius: 9999px;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  background: linear-gradient(to right, #9f41f1, #2e24ef);
+  transition: all 0.3s ease;
+  border: none;
 }
 
-@media screen and (max-width: 500px) {
-  .cardtitle {
-    font-size: 1.4rem;
-    line-height: 1.23;
+.nav-button:hover {
+  background-color: #2d3748; /* gray-800 */
+}
+
+/* Services Section Styles */
+.services-section {
+  width: 100%;
+  padding-top: 2rem;
+}
+
+.service-card {
+  position: relative;
+  width: 100%;
+  background-color: #fff;
+  font-family: var(--custom-font);
+  padding: 0.5rem 7rem;
+}
+
+.service-card-container {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 7.688rem;
+}
+
+@media (min-width: 768px) {
+  .service-card-container {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 7.688rem;
+  }
+  
+  .service-card-container-reverse {
+    flex-direction: row-reverse;
   }
 }
 
-.cardDescription {
+.service-image-wrapper {
+  flex: 1;
+  transform: scale(1);
+  transition: all 700ms;
+}
+
+.service-image-wrapper:hover {
+  transform: scale(1.05);
+}
+
+.service-image-container {
+  overflow: hidden;
+  border-radius: 1rem;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  min-width: 288px;
+  min-height: 288px;
+}
+
+.service-image {
+  object-fit: cover;
+  transition: transform 700ms;
+}
+
+.service-image:hover {
+  transform: scale(1.1);
+}
+
+.service-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.5rem 0;
+}
+
+.service-icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.service-icon {
+  background-color: black;
+  border-radius: 1rem;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.service-title {
+  color: #1f1f1d;
+  font-size: 1.625em;
+  line-height: 1.23;
+  font-weight: 700;
+  transform: scale(1);
+  transition: all 500ms;
+}
+
+.service-description {
   font-family: TT Commons Classic, Arial, sans-serif;
   color: #1f1f1da9;
   margin-bottom: 0;
@@ -350,65 +262,121 @@
 }
 
 @media screen and (max-width: 500px) {
-  .serviceCard {
+  .service-card {
     padding: 0.5rem 1rem;
   }
+  
+  .service-title {
+    font-size: 1.4rem;
+  }
 }
 
-/* Small mobile devices */
-@media screen and (max-width: 480px) {
-  .tagLine {
-    font-size: 32px !important;
-  }
-
-  .homeTitle {
-    font-size: 20px;
-  }
-
-  .servicesName,
-  .servicesName1 {
-    font-size: 28px;
-  }
-
-  .servicesTag,
-  .servicesDesc1 {
-    font-size: 22px;
-  }
-
-  .servicesDesc {
-    font-size: 16px;
-  }
-
+/* NEW Testimonials Section Styles */
+.testimonials-section {
+  padding: 5rem 6rem;
+  background-color: white;
 }
 
-.clientTitle {
-  letter-spacing: -.02em;
-  margin-top: 0;
+.testimonials-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.testimonials-label {
+  display: inline-block;
+  background-color: #4fd1c5;
+  color: #1a202c;
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 9999px;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.testimonials-heading {
+  font-size: 3rem;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #1f2937;
   margin-bottom: 0;
-  font-size: 2.625em !important;
-  font-weight: 500;
-  line-height: 1.05;
 }
 
-.serviceMainTitle {
-  letter-spacing: -.02em !important;
-  margin-top: 0 !important;
-  font-size: 2.625em !important;
-  font-weight: 500 !important;
-  line-height: 1.05 !important;
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
-.container {
-  max-width: 100% !important;
-}
-
-@media (min-width: 1024px) {
-  .container {
-    max-width: 100%;
+@media (min-width: 768px) {
+  .testimonials-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
-/* Testimonial section */
+.testimonial-card {
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background: linear-gradient(60deg, #000 60%, #0D4A45 100%);
+  color: white;
+  padding: 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.testimonial-quote-icon {
+  font-size: 4rem;
+  line-height: 1;
+  color: #4fd1c5;
+  font-family: serif;
+  margin-bottom: 1rem;
+  height: 40px;
+}
+
+.testimonial-content {
+  flex-grow: 1;
+  margin-bottom: 1rem;
+}
+
+.testimonial-text {
+  font-size: 16px;
+  line-height: 1.625;
+  margin-bottom: 0.5rem;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+}
+
+.testimonial-author-image {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 9999px;
+  overflow: hidden;
+  border: 2px solid #4fd1c5;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.testimonial-author-name {
+  font-weight: 700;
+  font-size: 1.125rem;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.testimonial-author-position {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+/* Keep the old testimonial styles for backward compatibility */
 .testimonial-section {
   background-color: white;
   padding: 5rem 0;
@@ -416,43 +384,26 @@
 
 .testimonial-container {
   max-width: 72rem;
-  /* equivalent to max-w-6xl */
   margin: 0 auto;
   padding: 0 1rem;
 }
 
-/* Testimonial card */
-.testimonial-card {
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  border-radius: 1rem;
-  border: 1px solid #e5e7eb;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  overflow: hidden;
-}
-
+/* Old testimonial card and animation styles - kept for compatibility */
 .testimonial-layout {
   display: flex;
   flex-direction: column;
 }
 
-/* Image container */
 .testimonial-image-container {
   width: 40%;
   position: relative;
 }
 
-.testimonial-image-container,
-.testimonial-content {
-  transition: opacity 0.1s ease-in-out;
-}
-
-/* Animation for sliding left (next slide) */
 .testimonial-card.slide-left {
   transform: translateX(-10px);
   opacity: 0;
 }
 
-/* Animation for sliding right (previous slide) */
 .testimonial-card.slide-right {
   transform: translateX(10px);
   opacity: 0;
@@ -461,7 +412,6 @@
 .testimonial-image {
   width: 40%;
   height: 20rem;
-  /* 320px - equivalent to h-80 */
   object-fit: cover;
 }
 
@@ -479,24 +429,6 @@
   font-weight: 500;
 }
 
-/* Content container */
-.testimonial-content {
-  width: 60%;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.testimonial-quote {
-  color: #1f1f1d;
-  letter-spacing: -.01em;
-  margin-bottom: 0;
-  font-size: 1.625em;
-  font-weight: 500;
-  line-height: 1.23;
-}
-
 .testimonial-footer {
   display: flex;
   align-items: center;
@@ -504,25 +436,9 @@
   margin-top: 2rem;
 }
 
-.testimonial-author-name {
-  color: #1f1f1d;
-  letter-spacing: -.01em;
-  font-size: 1.25em;
-  font-weight: 500;
-  line-height: 1.2;
-}
-
-.testimonial-author-position {
-  color: #1f1f1db3;
-  margin-bottom: 0;
-  font-size: 1.125em;
-  font-weight: 400;
-  line-height: 1.33;
-}
-
 .testimonial-read-more {
   border: 1px solid #333330;
-  color:#1f1f1d;
+  color: #1f1f1d;
   cursor: pointer;
   border-radius: .5em;
   justify-content: center;
@@ -537,10 +453,8 @@
 
 .testimonial-read-more:hover {
   background-color: #f3f4f6;
-  /* equivalent to hover:bg-gray-100 */
 }
 
-/* Navigation */
 .testimonial-navigation {
   display: flex;
   justify-content: center;
@@ -555,14 +469,11 @@
   border-radius: 0.5rem;
   border: 1px solid #f3f4f6;
   background-color: #f3f4f6;
-  /* equivalent to bg-gray-100 */
   cursor: pointer;
-  transition: background-color 0.3s;
 }
 
 .testimonial-nav-button:hover {
   background-color: #e5e7eb;
-  /* equivalent to hover:bg-gray-200 */
 }
 
 .testimonial-nav-button:active {
@@ -583,7 +494,6 @@
 .testimonial-divider,
 .testimonial-total-slides {
   color: #9ca3af;
-  /* equivalent to text-gray-400 */
 }
 
 /* Media queries for responsive design */
@@ -597,11 +507,66 @@
   }
 
   .testimonial-content {
-    width: 60%;
+    width: 100%;
   }
 
   .testimonial-image {
     height: 24rem;
-    /* 384px - equivalent to md:h-96 */
+  }
+}
+
+/* Responsive styling for features section */
+@media (max-width: 1024px) {
+  .features-content {
+    flex-direction: column;
+  }
+  
+  .features-text {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  
+  .features-images {
+    width: 100%;
+  }
+  
+  .nav-buttons {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .images-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+  
+  .image-container:last-child {
+    grid-column: span 2;
+  }
+  
+  .features-heading {
+    font-size: 1.875rem;
+  }
+  
+  .testimonials-heading {
+    font-size: 2.25rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .images-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .image-container {
+    grid-column: span 1;
+  }
+  
+  .testimonials-grid {
+    grid-template-columns: 1fr;
   }
 }
