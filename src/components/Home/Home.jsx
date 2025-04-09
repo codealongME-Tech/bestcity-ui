@@ -279,7 +279,6 @@ const HomePage = () => {
                 />
               </div>
             </div>
-            
             <div className="service-content">
               <div className="service-icon-container">
                 <div className="service-icon">{service.icon}</div>
