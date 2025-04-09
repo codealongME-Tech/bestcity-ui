@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail} from 'lucide-react';
 import './Footer.css';
 import Link from 'next/link';
 
