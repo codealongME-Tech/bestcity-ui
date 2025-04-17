@@ -65,7 +65,7 @@ const allBlogPosts: BlogPost[] = [
     },
     {
         id: '3',
-        title: 'Ridgecrest Foundation Modernizes Security with Coram',
+        title: 'Ridgecrest Foundation Modernizes Security with BestCity',
         category: 'Customer Success',
         imageUrl: '/images/ridgecrest.jpg',
         author: authors[0],
@@ -87,7 +87,7 @@ const allBlogPosts: BlogPost[] = [
     },
     {
         id: '5',
-        title: 'Coram Launches New Integration Platform',
+        title: 'BestCity Launches New Integration Platform',
         category: 'Company News',
         imageUrl: '/images/integration-platform.jpg',
         author: authors[0],
@@ -126,7 +126,7 @@ export default function Blogs() {
             {/* Header */}
             <header className="bg-white shadow-sm">
                 <div className="container mx-auto py-6 px-4">
-                    <h1 className="text-3xl font-bold text-gray-900">Coram Blog</h1>
+                    <h1 className="text-3xl font-bold text-gray-900">BestCity Blog</h1>
                     <p className="mt-2 text-lg text-gray-600">Insights on security, technology, and industry trends</p>
                 </div>
             </header>
@@ -330,7 +330,7 @@ export default function Blogs() {
                 <div className="container mx-auto px-4">
                     <div className="flex flex-col md:flex-row justify-between">
                         <div className="mb-8 md:mb-0">
-                            <h3 className="text-xl font-bold mb-4">Coram</h3>
+                            <h3 className="text-xl font-bold mb-4">BestCity</h3>
                             <p className="text-gray-400 max-w-xs">
                                 Innovative security solutions for businesses and organizations of all sizes.
                             </p>
@@ -382,7 +382,7 @@ export default function Blogs() {
                         </div>
                     </div>
                     <div className="mt-12 pt-8 border-t border-gray-800 text-center text-gray-400">
-                        <p>&copy; 2025 Coram. All rights reserved.</p>
+                        <p>&copy; 2025 BestCity. All rights reserved.</p>
                     </div>
                 </div>
             </footer>

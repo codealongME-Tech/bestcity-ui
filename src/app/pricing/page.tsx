@@ -36,7 +36,7 @@ export default function Pricing() {
                   <CheckIcon fontSize="small" />
                 </span>
                 <p className="hero-paragraph">
-                  You own the Coram Point - no complex leasing
+                  You own the BestCity Point - no complex leasing
                 </p>
               </div>
               <div className="feature-item-hero">
@@ -104,7 +104,7 @@ export default function Pricing() {
               </span>
             </div>
           </div>
-
+          
           {/* Pricing cards */}
           <div className="pricing-cards">
             {/* Basic plan */}
