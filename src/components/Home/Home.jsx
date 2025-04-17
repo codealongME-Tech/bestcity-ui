@@ -152,7 +152,6 @@ const HomePage = () => {
             priority
           />
         )}
-
         {/* Text overlay with improved styling */}
         <div className="absolute inset-10 flex flex-col justify-center px-6">
           <div className="bg-opacity-40 p-6 rounded-lg max-w-2xl">
