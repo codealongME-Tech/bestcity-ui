@@ -125,37 +125,10 @@ const HomePage = () => {
     ]
   };
 
-  const handleSlideTransition = (direction) => {
-    const testimonialCard = document.querySelector('.testimonial-card');
-    if (testimonialCard) {
-      const animation = direction === 'next' ? 'slide-left' : 'slide-right';
-      testimonialCard.classList.add(animation);
-      
-      setTimeout(() => {
-        if (direction === 'next') {
-          setCurrentSlide((prev) => (prev === totalSlides - 1 ? 0 : prev + 1));
-        } else {
-          setCurrentSlide((prev) => (prev === 0 ? totalSlides - 1 : prev - 1));
-        }
-        testimonialCard.classList.remove(animation);
-      }, 300);
-    } else {
-      if (direction === 'next') {
-        setCurrentSlide((prev) => (prev === totalSlides - 1 ? 0 : prev + 1));
-      } else {
-        setCurrentSlide((prev) => (prev === 0 ? totalSlides - 1 : prev - 1));
-      }
-    }
-  };
-
-  const nextSlide = () => handleSlideTransition('next');
-  const prevSlide = () => handleSlideTransition('prev');
-  
-  const currentTestimonial = TESTIMONIALS[currentSlide];
-
   const renderHeroSection = () => (
     <div className="min-h-screen grid">
       <div className="relative col-start-1 row-start-1">
+        {/* Video or fallback image */}
         {!videoError ? (
           <video
             ref={videoRef}
@@ -165,33 +138,38 @@ const HomePage = () => {
             playsInline
             preload="auto"
             className="w-full h-screen object-cover"
-            onError={(e) => {
-              console.error('Video error:', e);
-              console.error('Video path attempted:', videoSource);
-              setVideoError(true);
-            }}
+            onError={() => setVideoError(true)}
           >
             <source src={videoSource} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         ) : (
           <Image
-            src="/HomeImages/HomeCoverMobile.svg"
-            alt="Resourcing services"
+            src="/HomeImages/bestCityHomeCoverImage.png"
+            alt="AI Video Surveillance"
             fill
             className="object-cover"
             priority
           />
         )}
-      </div>
 
-      <div className="absolute connectHome left-10 right-0 p-8">
-        <button
-          onClick={() => setIsQueryFormOpen(true)}
-          className="connect-button"
-        >
-          Check Pricing
-        </button>
+        {/* Text overlay with improved styling */}
+        <div className="absolute inset-10 flex flex-col justify-center px-6">
+          <div className="bg-opacity-40 p-6 rounded-lg max-w-2xl">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Next-Gen AI Video Surveillance: <br /> <span className='text-[#5ED9BF]' > Smarter & Safer</span>
+            </h1>
+            <p className="text-xl text-white mb-8">
+              Gain real-time insights with AI-driven video <br /> analytics—detect, analyse, and optimise.
+            </p>
+            <button
+              onClick={() => setIsQueryFormOpen(true)}
+              className="connect-button"
+            >
+              Check Pricing
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -298,19 +276,19 @@ const HomePage = () => {
         <span className="testimonials-label">TESTIMONIALS</span>
         <h2 className="testimonials-heading">Hear From Our Customers</h2>
       </div>
-      
+
       <div className="testimonials-grid">
         {TESTIMONIALS.map((testimonial, index) => (
           <div key={index} className="testimonial-card">
             <div className="testimonial-quote-icon">"</div>
-            
+
             <div className="testimonial-content">
               <p className="testimonial-text">{testimonial.quote}</p>
             </div>
-            
+
             <div className="testimonial-author">
               <div className="testimonial-author-image">
-                <Image 
+                <Image
                   src={testimonial.image || "/HomeImages/Client0.png"}
                   alt={`${testimonial.author} photo`}
                   width={48}
