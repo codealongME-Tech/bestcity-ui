@@ -164,9 +164,12 @@ const HomePage = () => {
             </p>
             <button
               onClick={() => setIsQueryFormOpen(true)}
-              className="connect-button"
+              className="connect-button "
             >
               Check Pricing
+              <span className='arrowRight' >
+                <ArrowRight className="arrow-icon" />
+              </span>
             </button>
           </div>
         </div>
